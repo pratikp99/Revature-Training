@@ -1,0 +1,19 @@
+package com.revature.emp;
+
+public class DieselVehicle extends VehicleInfo {
+
+	private int distanceTravelled;
+	
+	@Override
+	public double calculateExpense() {
+		// TODO Auto-generated method stub
+		return 92*distanceTravelled;
+	}
+	
+//	public double calculateExpense(int distanceTravelled)
+//	{
+//		return 92*distanceTravelled;
+//	}
+	
+	
+}

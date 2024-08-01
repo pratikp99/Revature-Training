@@ -1,0 +1,11 @@
+//package com.revature.emp;
+//
+//public class EVehicle extends VehicleInfo implements VehicleBenefits{
+//
+//	@Override
+//	public String getBenefits() {
+//		// TODO Auto-generated method stub
+//		return "Good!!! Electric Vehicle";
+//	}
+//	
+//}

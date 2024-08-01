@@ -1,0 +1,10 @@
+package com.revature.emp;
+
+public class Vehicle {
+	public static void main(String args[])
+	{
+		PetrolVehicle v=new PetrolVehicle;
+		v.setvNumber(9810);
+		v.setDistanceTravelled(1200);
+	}
+}

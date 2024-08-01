@@ -1,0 +1,10 @@
+package com.revature.emp;
+
+public class PetrolVehicle extends VehicleInfo {
+
+	public PetrolVehicle() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+}

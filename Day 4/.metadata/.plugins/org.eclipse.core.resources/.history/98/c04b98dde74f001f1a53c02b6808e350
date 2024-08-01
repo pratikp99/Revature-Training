@@ -1,0 +1,21 @@
+public class FlowOfCode {
+    public static void main(String[] args) {
+        System.out.println("Starting program");
+
+        try {
+            System.out.println("Starting try block");
+
+            // Simulating a situation that might throw an exception
+            int result = 10 / 0; // This will throw an ArithmeticException
+
+            System.out.println("This line will not be executed due to exception");
+        } catch (ArithmeticException e) {
+            System.out.println("Starting catch block");
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("Starting finally block");
+        }
+
+        System.out.println("Ending program");
+    }
+}

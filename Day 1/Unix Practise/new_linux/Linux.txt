@@ -1,0 +1,21 @@
+trello
+Linux architecture: 5 Parts= Hardware , kernel , shell, other function, attributes/features
+Distributions in terms of Linux: kernel remains same
+
+List down some of the directory commands of Linux: 
+List down some of the file handling/management commands of Linux: 
+List down some of the filter commands of Linux: 
+
+Programming in Linux:scripting (.sh)
+
+Checkout chmod command
+
+Write script to read to numbers and display their sum
+
+What is repository in git?
+what is staging area?
+what is a branch?
+what is merge conflict?
+what is pull request?
+Scrum?
+Scrum ceremomies?

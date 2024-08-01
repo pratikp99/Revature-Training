@@ -1,0 +1,11 @@
+package com.revature.emp;
+
+public class PetrolVehicle extends VehicleInfo {
+	
+	private int distanceTravelled;
+
+	public double calculateExpense(int distanceTravelled) {
+		return 104*distanceTravelled;
+	}
+	
+}

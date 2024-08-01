@@ -1,0 +1,1 @@
+Create a java application to simulate the employee salary system. There are two types of employees Contractual Employee and Salary Employee. For salaried employee salary is calculated based on number of days present and for contractual employee, the salary is calculated based on number of hours worked. The contractual employee doesn't get any company benefits.

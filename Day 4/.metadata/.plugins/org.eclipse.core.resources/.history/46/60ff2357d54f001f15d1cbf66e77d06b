@@ -1,0 +1,27 @@
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+// Class with Voting Eligibility Check
+public class CustomException1 {
+
+    // Method to check voting eligibility
+    public static void checkAgeForVoting(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("You are not allowed to vote. Age must be 18 or above.");
+        } else {
+            System.out.println("You are eligible to vote.");
+        }
+    }
+
+    // Main method to demonstrate the exception
+    public static void main(String[] args) {
+        try {
+            checkAgeForVoting(16); // Change this value to test
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
