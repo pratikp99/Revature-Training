@@ -30,7 +30,7 @@ public static void main(String[] args) {
 //		logger.warn("Warn");
 //		logger.error("Error");
 //		logger.debug("Opening file for writing Object");
-		fos=new FileOutputStream("C:\\filehandling\\employee.dat");
+		fos=new FileOutputStream("C:\\filehanding\\employee.dat");
 		oos=new ObjectOutputStream(fos);
 		//logger.info("Creating Object");
 		emp=new Employee(101, "Jasdhir", "Trainer");
@@ -50,7 +50,7 @@ public static void main(String[] args) {
 	ObjectInputStream ois=null;
 	Employee fromFileEmployee=null;
 	try {
-		fis=new FileInputStream("C:\\filehandling\\employee.dat");
+		fis=new FileInputStream("C:\\filehanding\\employee.dat");
 		ois=new ObjectInputStream(fis);
 		fromFileEmployee=(Employee) ois.readObject();
 		System.out.println(fromFileEmployee);
