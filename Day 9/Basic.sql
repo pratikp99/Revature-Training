@@ -38,3 +38,13 @@ truncate table student;
 
 delete from student where student_name='manas';
 
+CREATE TABLE contacts (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(25) NOT NULL,
+  email varchar(30) NOT NULL,
+  username varchar(50) GENERATED ALWAYS AS (concat(name,_utf8mb4' ')) VIRTUAL,
+  PRIMARY KEY (id),
+  UNIQUE KEY email (email)
+);
+
+select * from contacts;
