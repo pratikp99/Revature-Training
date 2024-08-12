@@ -1,9 +1,0 @@
-import java.util.*;
-package Questions;
-
-public class Multiplication {
-	public static void main(String args[])
-	{
-		
-	}
-}

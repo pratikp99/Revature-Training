@@ -1,7 +1,0 @@
-package Questions;
-
-public class InvalidAgeException extends Exception{
-	
-	
-	
-}
