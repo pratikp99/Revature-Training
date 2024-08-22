@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <h2 id="myheading">Welcome to Event Listener</h2>
+    <script>
+        var element=document.getElementById("myheading");
+        // element.addEventListener("click",headingClicked);
+        // function headingClicked(){
+        //     alert("Heading clicked");
+        //     element.innerHTML="Mouse is moved....";
+        // }
+        element.addEventListener("mouseover",headingClicked1);
+        function headingClicked1(){
+            alert("Mouse over ");
+            element.innerHTML="Mouse is moved....";
+        }
+    </script>
+</body>
+</html>
