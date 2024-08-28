@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Servlet Project</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+ 
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>servlets.FirstServlet</servlet-class>
+    <init-param>
+    	<param-name>message</param-name>
+    	<param-value>Hello One</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/first</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>contextParam</param-name>
+  	<param-value>Hello Context</param-value>
+  </context-param>
+  
+  <servlet>
+
+    <servlet-name>SecondServlet</servlet-name>
+    <servlet-class>servlets.SecondServlet</servlet-class>
+    <init-param>
+    	<param-name>message 2</param-name>
+    	<param-value>Hello Two</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecondServlet</servlet-name>
+    <url-pattern>/second</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -21,7 +21,7 @@ public static void main(String[] args) {
 	try {
 		//Class.forName("com.mysql.cj.jdbc.Driver");
 		// STEP 2 - Create the connection Object
-		connection=DriverManager.getConnection(url,uname,pwd);
+		connection=DriverManager.getConnection(url,uname,pwd);     
 		
 		// STEP 3- Create a Statement/PS /CS Object
 		statement=connection.createStatement();

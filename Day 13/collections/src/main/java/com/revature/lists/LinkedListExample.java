@@ -1,6 +1,5 @@
 package com.revature.lists;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,8 +22,8 @@ public class LinkedListExample {
         
         teamA.remove("Pranav");
         teamA.remove(5);
-        teamA.removeFirst();
-        teamA.removeLast();
+        // teamA.removeFirst();
+        // teamA.removeLast();
         
         System.out.println("After deleting: ");
         

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-group .gender-options {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+    <!--<form action="RegistrationServlet" method="post">-->
+    <form action="handleform.jsp" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact:</label>
+            <input type="tel" id="contact" name="contact" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="">Select your state</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Gujarat">Gujarat</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Hobbies:</label>
+            <div class="hobby-options">
+                <label><input type="checkbox" name="hobbies" value="Playing"> Playing</label>
+                <label><input type="checkbox" name="hobbies" value="Singing"> Singing</label>
+                <label><input type="checkbox" name="hobbies" value="Traveling"> Traveling</label>
+                <label><input type="checkbox" name="hobbies" value="Dancing"> Dancing</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
