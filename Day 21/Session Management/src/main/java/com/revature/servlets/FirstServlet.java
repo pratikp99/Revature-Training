@@ -9,6 +9,10 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.revature.models.Product;
 
 /**
  * Servlet implementation class FirstServlet
@@ -36,12 +40,12 @@ public class FirstServlet extends HttpServlet {
 		String uName=request.getParameter("username");
 		session.setAttribute("username", uName);
 		out.print("<h2>Welcome "+uName.toUpperCase()+"</h2>");
-//		Product p1=new Product(1,"Mouse");
-//		Product p2=new Product (2,"Keyboard");
-//		List<Product> pList=new ArrayList<>();
-//		pList.add(p1);
-//		pList.add(p2);
-//		session.setAttribute("productList", pList);
+		Product p1=new Product(1,"Mouse");
+		Product p2=new Product (2,"Keyboard");
+		List<Product> pList=new ArrayList<>();
+		pList.add(p1);
+		pList.add(p2);
+		session.setAttribute("productList", pList);
 		out.print("<a href='two'>Servlet2</a>");
 	}
 

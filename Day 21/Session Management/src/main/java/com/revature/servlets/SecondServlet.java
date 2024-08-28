@@ -38,11 +38,11 @@ public class SecondServlet extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
 		String userName=(String) session.getAttribute("username");
-		//ArrayList products=(ArrayList) session.getAttribute("productList");
+		ArrayList products=(ArrayList) session.getAttribute("productList");
 		out.print("<h2>Servlet 2</h2>");
 		out.print("<h3>Welcome form the session "+userName+"</h3>");
 		out.print("<h2>Products");
-		//out.print(products+"</h2>");
+		out.print(products+"</h2>");
 	}
 
 	/**
