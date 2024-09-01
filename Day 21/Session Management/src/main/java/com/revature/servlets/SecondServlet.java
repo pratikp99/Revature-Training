@@ -2,6 +2,7 @@ package com.revature.servlets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -36,13 +37,38 @@ public class SecondServlet extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
-		HttpSession session=request.getSession();
-		String userName=(String) session.getAttribute("username");
-		ArrayList products=(ArrayList) session.getAttribute("productList");
-		out.print("<h2>Servlet 2</h2>");
-		out.print("<h3>Welcome form the session "+userName+"</h3>");
-		out.print("<h2>Products");
-		out.print(products+"</h2>");
+		
+		//following is the code for the session
+//		HttpSession session=request.getSession();
+//		String userName=(String) session.getAttribute("username");
+//		ArrayList products=(ArrayList) session.getAttribute("productList");
+//		out.print("<h2>Servlet 2</h2>");
+//		out.print("<h3>Welcome form the session "+userName+"</h3>");
+//		out.print("<h2>Products");
+//		out.print(products+"</h2>");
+		
+		//following is the code for the cookies
+		Cookie[] ck = request.getCookies();
+		String userName = null;
+
+		if (ck != null) {
+		    for (int i = 0; i < ck.length; i++) {
+		        if ("username".equals(ck[i].getName())) {
+		            userName = ck[i].getValue();
+		            break;
+		        }
+		    }
+		}
+
+		// Ensure userName is not null before displaying
+		if (userName != null) {
+		    out.print("<h2>Servlet 2</h2>");
+		    out.print("<h3>Welcome from the cookie, " + userName + "</h3>");
+		} else {
+		    out.print("<h2>No username found in cookies.</h2>");
+		}
+		out.print("<h2>Products</h2>");
+		
 	}
 
 	/**

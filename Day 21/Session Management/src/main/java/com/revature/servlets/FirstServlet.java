@@ -2,6 +2,7 @@ package com.revature.servlets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -36,17 +37,28 @@ public class FirstServlet extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
-		HttpSession session=request.getSession();
-		String uName=request.getParameter("username");
-		session.setAttribute("username", uName);
-		out.print("<h2>Welcome "+uName.toUpperCase()+"</h2>");
-		Product p1=new Product(1,"Mouse");
-		Product p2=new Product (2,"Keyboard");
-		List<Product> pList=new ArrayList<>();
-		pList.add(p1);
-		pList.add(p2);
-		session.setAttribute("productList", pList);
+		
+		//below is the code for the session
+//		HttpSession session=request.getSession();
+//		String uName=request.getParameter("username");
+//		session.setAttribute("username", uName);
+//		out.print("<h2>Welcome "+uName.toUpperCase()+"</h2>");
+//		Product p1=new Product(1,"Mouse");
+//		Product p2=new Product (2,"Keyboard");
+//		List<Product> pList=new ArrayList<>();
+//		pList.add(p1);
+//		pList.add(p2);
+//		session.setAttribute("productList", pList);
+//		out.print("<a href='two'>Servlet2</a>");
+		
+		//following is the code for the cookies
+		String uName = request.getParameter("username");
+		Cookie ck = new Cookie("username", uName); // Creating cookie object
+		response.addCookie(ck); // Adding cookie to the response
+
+		out.print("<h2>Welcome " + uName.toUpperCase() + "</h2>");
 		out.print("<a href='two'>Servlet2</a>");
+		
 	}
 
 	/**
